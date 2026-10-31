@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta name="x-build" content="d3939890f4">
-<meta name="x-build-ts" content="1793254290314">
+<meta name="x-build" content="a5ba2aa467">
+<meta name="x-build-ts" content="1793469034229">
 <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
 <meta charset="UTF-8">
 <meta name="theme-color" content="#7CB342">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="apple-touch-icon" href="./icon-192.png">
+<link rel="apple-touch-icon" href="./2014.pic">
 <link rel="manifest" href="./manifest.json">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#F6F1E8">
@@ -44,7 +44,7 @@ input,textarea{font-family:inherit;font-size:calc(16px*var(--fs));color:var(--in
 textarea{resize:none}
 input:focus,textarea:focus{border-color:var(--green)}
 ::placeholder{color:#BBA98C}
-#app{max-width:560px;margin:0 auto;background:rgba(255,255,255,.26);backdrop-filter:blur(26px);-webkit-backdrop-filter:blur(26px);position:relative;min-height:100dvh}
+#app{max-width:560px;margin:0 auto;background:rgba(255,255,255,.26);backdrop-filter:blur(26px);-webkit-backdrop-filter:blur(26px);position:relative;min-height:0;height:100%}
 @media(min-width:700px){#app{border-left:1px solid var(--line);border-right:1px solid var(--line);box-shadow:0 0 30px rgba(70,58,40,.06)}}
 #view{min-height:100dvh;padding-bottom:calc(30px + env(safe-area-inset-bottom))}
 
@@ -115,7 +115,7 @@ input:focus,textarea:focus{border-color:var(--green)}
    用户的自定义气泡 CSS（渐变/挂件/overflow:hidden/深色底）都碰不到它，颜色跟页面主题走。 */
 .zkm-line{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin-top:4px;padding:0 2px;max-width:100%}
 .msg-row.out .zkm-line{justify-content:flex-end}
-.zkm-chip{display:inline-flex;align-items:center;gap:4px;font-size:calc(10px*var(--fs));line-height:1.4;color:var(--sub);background:rgba(0,0,0,.045);border-radius:99px;padding:1.5px 7px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.zkm-chip{display:inline-flex;align-items:center;gap:4px;font-size:calc(10px*var(--fs));line-height:1.4;color:#5A5148;background:rgba(255,255,255,.66);border:1px solid rgba(90,70,50,.12);border-radius:99px;padding:1.5px 7px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .zkm-chip i{font-style:normal;font-size:calc(9px*var(--fs));font-weight:700;color:var(--green);opacity:.95;flex:0 0 auto}
 /* 壁纸/深色背景下也能看清：给一点点描边 */
 .chat-wrap .zkm-chip{box-shadow:0 1px 3px rgba(0,0,0,.06)}
@@ -252,7 +252,7 @@ background:rgba(255,255,255,.8);border:1px solid var(--line);min-height:58px}
 .bubble.out{background:var(--green);border-bottom-right-radius:5px;color:#fff}
 .bubble.out .t{color:rgba(255,255,255,.72)}
 .bubble.in{background:var(--glass-strong);border:1px solid var(--glass-brd);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom-left-radius:5px}
-.bubble .t{display:block;font-size:calc(10.5px*var(--fs));color:var(--sub);margin-top:4px;text-align:right;white-space:nowrap}
+.bubble .t{display:block;font-size:calc(10.5px*var(--fs));color:#6E685E;margin-top:4px;text-align:right;white-space:nowrap}
 .bubble .st.gray{opacity:.5}
 .bubble.out .quote-box{background:rgba(0,0,0,.16);color:#fff}
 .bubble.in.typing{min-width:56px;min-height:36px;display:flex;align-items:center;justify-content:center}
@@ -382,7 +382,7 @@ background:rgba(255,255,255,.8);border:1px solid var(--line);min-height:58px}
 .bubble.in{background:linear-gradient(145deg,rgba(255,233,240,.94),rgba(255,219,229,.8));border:1px solid rgba(255,255,255,.78);color:#8A4A5C;box-shadow:0 4px 16px rgba(244,143,177,.16),inset 0 1px 0 rgba(255,255,255,.78);border-bottom-left-radius:9px}
 .bubble.out{background:linear-gradient(145deg,#F9AEC2,#F28FB0);color:#fff;box-shadow:0 6px 18px rgba(244,143,177,.28),inset 0 1px 0 rgba(255,255,255,.4);border-bottom-right-radius:9px}
 .bubble.out .t{color:rgba(255,255,255,.82)}
-.bubble.recalled{background:rgba(255,255,255,.45)!important;color:#B9A68F;font-size:calc(13px*var(--fs));border:1px dashed rgba(180,160,140,.4);box-shadow:none!important}
+.bubble.recalled{background:rgba(255,255,255,.8)!important;color:#6B6152;font-size:calc(13px*var(--fs));border:1px dashed rgba(180,160,140,.4);box-shadow:none!important}
 .bubble .st{color:#7FA8D9;font-size:calc(11px*var(--fs))}
 .bubble .st.gray{color:#C9B4BB;font-weight:400}
 .bubble.out .st{color:rgba(255,255,255,.92)}
@@ -1997,7 +1997,9 @@ body.wlt-mode #view{background:#F2F2F3}
 /* 每一页的网格至少撑满一屏：空白处也能拖进去（第 3 页那种只有一两个 App 的页） */
 
 
-#home{display:flex;flex-direction:column;height:100%;min-height:0}
+/* 2026-10-31：首页也跟着内容长高（以前 height:100% 把每一页钉死一屏、超出的裁掉）。
+   下面 #view.home-view #home 的 min-height:100dvh 保证内容不够一屏时也铺满。 */
+#home{display:flex;flex-direction:column;height:auto;min-height:100dvh}
 .home-pages{flex:1 1 auto;min-height:0}
 .home-page{display:flex;flex-direction:column;min-height:0}
 .home-grid{flex:1 1 auto;min-height:0}
@@ -2156,6 +2158,56 @@ html,body{background:#FFFFFF !important;background-image:none !important}
 body{background:#FFFFFF !important;color:#111214}
 /* 页面底：白（#home 的壁纸保持不动，所以你上传的壁纸仍是彩色） */
 #view{background:transparent}
+
+/* ===== 自然滚动：整页滚，标题栏吸顶（2026-10-31 定稿，替换「整页固定」） =====
+   上一版是「html/body 锁死 + #view 自己滚」：iOS 上 dvh 与 100% 不相等，
+   页面会跳、地址栏伸缩留缝、主页最底下那排 App 名字被裁掉。
+   现在回到最朴素的浏览器行为：
+     · html/body 不锁高、不锁 overflow → 整页跟着内容长、整页滚
+     · #view 高度 auto，跟着内容长，不再当滚动容器
+     · .page-top / .chat-top / .sp-top 自己的 position:sticky 负责吸顶
+   整屏自管页（聊天 / 小屋）用更具体的选择器（body.chat-mode #view、
+   html.lock-all #view、body.room-mode #view）覆盖这里，行为保持不变。
+   注意：这里故意不加 !important —— #view:has(.chat-top) 那条要用更高的
+   优先级保住排版，加了 !important 会把它压掉。 */
+/* overscroll-behavior 保持 none：整页滚了以后，往下拉还是会触发安卓 Chrome 的"下拉刷新"
+   （一刷新就重开、开场动画重播），所以这里照旧关掉回弹/刷新，只关"越界的甩动"，不影响正常滚动 */
+html,body{height:auto;overflow:visible;overscroll-behavior:none;position:static}
+/* ★ #app 原来有 backdrop-filter:blur(26px)。blur 会让 #app 变成"fixed 后代的包含块"，
+   以前 #app 正好一屏高，所以看不出问题；现在 #app 跟着内容长高，
+   里面的 position:fixed 元素（备忘录/信箱的悬浮按钮、字卡卡面…）就会跑到整篇文档的底部去。
+   这一层毛玻璃在现在的配色下本来也看不见（#home / #view 各自都有不透明底），所以直接去掉。 */
+#app{height:auto;min-height:100dvh;overflow:visible;backdrop-filter:none;-webkit-backdrop-filter:none}
+#view{height:auto;min-height:100dvh;max-height:none;overflow:visible}
+/* 整页滚了以后滚动条会跑到窗口最右边，手机上虽然看不见，桌面/多窗时太扎眼，统一隐藏 */
+html{scrollbar-width:none}
+html::-webkit-scrollbar,body::-webkit-scrollbar{width:0;height:0}
+/* ★ 视口高度一律用 svh（＝地址栏展开时的高度，滚动过程中不变）。
+   用 dvh 的话 iOS 地址栏一收一展，页面高度就跟着变，滑到一半会抖一下——
+   这正是交接说明里记的那个坑。老浏览器没有 svh 就退回上面的 dvh/vh。 */
+@supports (min-height:100svh){
+  #app{min-height:100svh}
+  #view{min-height:100svh}
+  #home,#view.home-view #home{min-height:100svh}
+  .home-pages{min-height:calc(100svh - 120px)}
+}
+
+/* ★ 聊天室 / 小屋是「高度=视口」的自管页，必须让 height 说话：
+   键盘弹起时 --vvh（visualViewport 实测）会比一屏矮，上面那条 min-height:100svh
+   会把 #view 又撑回一屏高 → 输入栏被顶到键盘下面，iOS 只好把整页往上推，
+   结果就是「键盘一开，上面一大片空白、输入框跑到顶上」（2026-10-31 用户截图）。
+   这里把最低高度清零，聊天/小屋回到「高度=--vvh」的老行为。 */
+body.chat-mode #view,body.room-mode #view,html.lock-all #view{min-height:0!important}
+
+/* ===== 壁纸只在主页透出来（2026-10-30 修「下滑漏底图」） =====
+   以前 #view 是 transparent，壁纸层(body::before)固定在后面，
+   其它页面滚动时就会从内容缝隙里露出来（用户反馈"下滑出现底图"）。
+   现在：主页保持透明（壁纸照常），其余页面铺一版不透明纸色。 */
+#view:not(.home-view){background:var(--bg)}
+#view:not(.home-view) .page-top{background:var(--bg);border-bottom:1px solid rgba(0,0,0,.045)}
+/* 这些页面自己整页铺满（暗色），不要被纸色盖住 */
+body.room-mode #view,body.wlt-mode #view{background:var(--bg)}
+#view .rd2-page,#view .cn-room{background-color:#0A0814}
 .screen,.chat-wrap,.mm-wrap{background:transparent}
 /* 卡片/组件：白色实底 + 1px 细边 + 几乎没有阴影，去掉毛玻璃 */
 /* 有用户底图的容器：只改底色，保留 --wbg / background-image（你上传的底图照常显示） */
@@ -2819,8 +2871,8 @@ body.room-mode .bd-board{flex:0 0 auto;max-height:34vh;overflow-y:auto}
 .stk-hint{font-size:calc(11px*var(--fs));color:var(--sub);text-align:center;padding:8px 0 2px}
 
 /* ================= 拍一拍：透明，不要底板 ================= */
-.pat-in{background:transparent!important;padding:0!important;border-radius:0!important;
-  color:var(--sub)!important;font-size:calc(12.5px*var(--fs))}
+.pat-in{background:rgba(255,255,255,.62)!important;padding:5px 11px!important;border-radius:999px!important;
+  color:#4F4A42!important;font-size:calc(12.5px*var(--fs))}
 .pat-in b{color:var(--ink);font-weight:600}
 .pat-row{margin:8px 0}
 
@@ -3224,7 +3276,10 @@ body.room-mode .bd-board{flex:0 0 auto;max-height:34vh;overflow-y:auto}
 /* ===== 雷达 v2 · 暗紫罗盘 ===== */
 #view.rd2-mode{background:radial-gradient(120% 55% at 50% 0%,#241C3E 0%,#141026 45%,#0A0814 100%);color:#EDE9F4}
 .rd2-page{min-height:100vh;background:radial-gradient(120% 55% at 50% 0%,#241C3E 0%,#141026 45%,#0A0814 100%);color:#EDE9F4}
-.rd2-top{display:flex;align-items:center;gap:10px;padding:12px 14px;color:#EDE9F4}
+.rd2-top{display:flex;align-items:center;gap:10px;padding:12px 14px;color:#EDE9F4;
+  position:sticky;top:0;z-index:9;
+  background:linear-gradient(180deg,#241C3E 0%,#191331 100%);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .rd2-top .back{color:#CFC6E6}
 .rd2-top .pt{font-size:calc(14.5px*var(--fs));font-weight:600;letter-spacing:.06em}
 .rd2-top .pr{margin-left:auto;font-size:calc(10px*var(--fs));color:#A79EC0;border:1px solid #33294E;border-radius:99px;padding:3px 9px}
@@ -3291,6 +3346,63 @@ body.room-mode .bd-board{flex:0 0 auto;max-height:34vh;overflow-y:auto}
 .rd2-rw b{font-weight:600}
 .rd2-say{margin-top:12px;padding:12px;border-radius:12px;background:#FBF3E4;border:1px solid rgba(201,164,106,.35);
   font-family:"Songti SC",Georgia,serif;font-size:calc(14px*var(--fs));line-height:1.8;color:#4A3B60}
+/* 暗色页面（影院 / 咖啡馆 / 雷达）的标题栏跟着变暗 */
+body.dark-page #view{background:#0E0C18}
+body.dark-page .page-top{background:#0E0C18!important;border-bottom:1px solid rgba(255,255,255,.06)!important;color:#EDE9F4}
+body.dark-page .page-top .pt{color:#EDE9F4}
+body.dark-page .page-top .back{color:#CFC6E6}
+
+/* ===== 自由造句（2026-11-01 · 第一批） =====
+   只作用于 .zj-* 和 #zjPctBox，不改任何现有规则。
+   分格气泡：一格一个零件；虚线边表示"这是拼的"。 */
+.zj-glyph{display:inline-flex;flex-wrap:wrap;gap:3px;align-items:center;padding:7px 10px;
+  border:1.4px dashed rgba(17,18,20,.42);border-radius:16px;background:var(--card,#fff);max-width:100%}
+.zj-tile{background:rgba(17,18,20,.045);border-radius:7px;padding:4px 8px;line-height:1.35;
+  font-size:calc(15px*var(--fs));color:var(--ink,#111214)}
+.zj-sep{color:rgba(17,18,20,.28);font-size:calc(12px*var(--fs));padding:0 1px}
+.zj-line{margin-top:5px}
+.zj-tag{display:inline-block;font-size:calc(10px*var(--fs));color:var(--sub,#6B6D72);
+  background:rgba(17,18,20,.05);border-radius:5px;padding:1px 6px}
+/* 设置里那一行（塞进 .rhy-grid 的一个 .inl 里） */
+#zjPctBox .zj-setrow{display:flex;align-items:center;gap:8px}
+#zjPctBox .zj-setrow input{width:76px;flex:0 0 76px;text-align:center}
+#zjPctBox .zj-u{font-size:calc(12px*var(--fs));color:var(--sub,#6B6D72)}
+.zj-sw{width:42px;height:24px;border-radius:99px;background:#E2E2E4;position:relative;
+  flex:0 0 auto;display:inline-block;transition:.16s}
+.zj-sw.on{background:#111214}
+.zj-sw i{position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;
+  background:#fff;transition:.16s}
+.zj-sw.on i{left:21px}
+.zj-hint2{font-size:calc(10.5px*var(--fs));color:var(--sub,#6B6D72);margin-top:4px;line-height:1.5}
+
+/* ===== 自由造句 · 字卡库区块（第一批附带的第二批） ===== */
+#zjLib{margin:12px 0 6px;padding:12px 0 4px;border-top:1px solid rgba(17,18,20,.08)}
+.zj-libhead{display:flex;align-items:baseline;gap:8px;font-size:calc(13.5px*var(--fs));font-weight:700;color:var(--ink,#111214)}
+.zj-libsub{margin-left:auto;font-weight:400;font-size:calc(10.5px*var(--fs));color:var(--sub,#6B6D72)}
+.zj-rowline{display:flex;align-items:center;gap:10px;padding:9px 0 4px;font-size:calc(12.5px*var(--fs));color:#3A3B3F}
+.zj-seg2{display:flex;gap:6px;margin-left:auto}
+.zj-seg2 button{border:1px solid rgba(17,18,20,.12);background:#fff;border-radius:9px;padding:5px 10px;
+  font-size:calc(11.5px*var(--fs));color:#3A3B3F;font-family:inherit}
+.zj-seg2 button.on{background:#111214;color:#fff;border-color:#111214;font-weight:600}
+.zj-note{font-size:calc(10.5px*var(--fs));color:var(--sub,#6B6D72);padding:2px 0 8px;line-height:1.5}
+.zj-catrow{display:flex;align-items:center;gap:8px;padding:9px 0;border-bottom:1px solid rgba(17,18,20,.06);
+  font-size:calc(13px*var(--fs));color:#2A2B2F;cursor:pointer}
+.zj-catrow .n{flex:1;min-width:0}
+.zj-catrow .n i{font-style:normal;color:#9A9AA0;font-size:calc(11px*var(--fs));margin-left:6px}
+.zj-catrow .c{font-size:calc(11px*var(--fs));color:#9A9AA0;background:#F5F5F6;border-radius:6px;padding:1px 7px}
+.zj-catrow .ar{color:#C8C8CC;font-size:calc(12px*var(--fs))}
+.zj-catrow.open{background:#FAFAFA}
+.zj-catbody{display:flex;flex-wrap:wrap;gap:6px;padding:10px 0 6px}
+.zj-wd{border:1px solid rgba(17,18,20,.12);background:#fff;border-radius:99px;padding:4px 10px;
+  font-size:calc(12px*var(--fs));color:#2A2B2F;font-family:inherit;position:relative}
+.zj-wd.off{opacity:.35;text-decoration:line-through}
+.zj-wd.mine{border-color:rgba(17,18,20,.45);background:#F7F7F8;padding-right:17px}
+.zj-wd.mine u{position:absolute;right:4px;top:0;font-size:9px;color:#9A9AA0;text-decoration:none}
+.zj-addrow{display:flex;gap:8px;width:100%;padding-top:4px}
+.zj-addrow input{flex:1;min-width:0;border:1px dashed rgba(17,18,20,.22);border-radius:10px;padding:8px 10px;
+  font-size:calc(13px*var(--fs));font-family:inherit;background:#FCFCFC;color:#111214}
+.zj-addrow button{border:1px solid #111214;background:#111214;color:#fff;border-radius:10px;padding:8px 14px;
+  font-size:calc(12.5px*var(--fs));font-family:inherit;flex:0 0 auto}
 </style>
 </head>
 <body>
@@ -4371,6 +4483,14 @@ function migrate(s){
   if(s.settings.keepVol===undefined)s.settings.keepVol='light';
   if(s.settings.tarotRevPct===undefined)s.settings.tarotRevPct=50;
   if(s.settings.tarotDailyPct===undefined)s.settings.tarotDailyPct=40;
+  /* 自由造句（第一批）：默认关、概率 15、只出短句。词表和"关掉的词"也在这里，
+     所以备份/导入会自动带上，不用改备份代码。 */
+  if(s.settings.zaojuOn===undefined)s.settings.zaojuOn=false;
+  if(s.settings.zaojuPct===undefined)s.settings.zaojuPct=15;
+  if(s.settings.zaojuLen===undefined)s.settings.zaojuLen='short';
+  if(s.settings.zaojuCount===undefined)s.settings.zaojuCount=0;
+  if(!s.settings.zaojuMine||typeof s.settings.zaojuMine!=='object'||Array.isArray(s.settings.zaojuMine))s.settings.zaojuMine={};
+  if(!s.settings.zaojuOff||typeof s.settings.zaojuOff!=='object'||Array.isArray(s.settings.zaojuOff))s.settings.zaojuOff={};
   if(s.settings.emojiPct===undefined)s.settings.emojiPct=15;
   if(s.settings.quotePct===undefined)s.settings.quotePct=40;
   if(s.settings.checkinPct===undefined)s.settings.checkinPct=25;
@@ -5679,6 +5799,17 @@ function render(v){
   try{ var _vv=document.getElementById('view'); if(_vv&&v!=='home')_vv.classList.remove('home-view') }catch(e){}
   var _inSnap=inputSnapshot();   /* ★ 其它页面同理：重绘不打断正在输入的内容 */
   v=v||location.hash.replace('#','')||'home';
+  /* ★ 换成「整页滚」以后，滚动位置记在 document 上（以前记在被整个替换掉的 #view 上，
+     所以旧版重绘后自动回到顶部）。这里显式处理：只有"真的换了一页"才滚回顶部，
+     同一页内的重绘（发表评论、勾选、发消息…）保持当前位置，不把用户弹回顶上。 */
+  try{
+    if(window.__lastRenderView!==v){
+      window.__lastRenderView=v;
+      try{window.scrollTo(0,0)}catch(e1){}
+      try{var _d=document.documentElement;if(_d)_d.scrollTop=0}catch(e2){}
+      try{var _b=document.body;if(_b)_b.scrollTop=0}catch(e3){}
+    }
+  }catch(e){}
   /* ★ 适配：老浏览器（Safari<15.4、部分微信内核）不支持 CSS 的 :has()，
      以前聊天页的高度/滚动、钱包的灰底都靠 :has() 撑着 → 那些机器上会退化。
      这里在 body 上打个 class，样式表里有一份等价的 class 版本兜底。 */
@@ -5686,6 +5817,8 @@ function render(v){
     document.body.classList.toggle('chat-mode',v==='chat');
     document.body.classList.toggle('wlt-mode',v==='wallet');
     document.body.classList.toggle('room-mode',v==='room');
+    /* 影院/咖啡馆/雷达是暗色整页，标题栏要跟着变暗，不然白条压在黑页上很割裂 */
+    document.body.classList.toggle('dark-page',(v==='cinema'||v==='cafe'||v==='radar'));
   }catch(e){}
   if(v==='home')renderHome();
   else if(v==='profile')renderProfile();
@@ -7331,6 +7464,7 @@ var _timer=null,_typing=null,_ntfSilent=false,_ntfTimer=null;
 var _blpBound=false,_cldBound=false;
 /* 聊天区是否贴在底部：翻历史时不要被新消息拽走 */
 var _chatAtBottom=true;
+var _schedTok=0;
 var _schedSpin=0,_schedSpinAt=0;
 var _replyTimer=null;
 /* ★ 朋友圈访客：设置里写的是"哥会来逛并留字卡留言"，
@@ -7351,6 +7485,11 @@ function visitLeaveCard(){
   }catch(e){}
 }
 function schedule(){
+  /* ★ 每次重排都递增一个代号，旧计时器醒来发现代号变了就直接退出。
+     以前：邀请任务的 fn 结尾自己调了一次 schedule()，计时器回调外面又调了一次，
+     于是同一时刻挂着两条链 → 到点后各发一次邀请，再各自长出两条 → 邀请卡越积越多
+     （用户报的"第二次进聊天室又收到一遍专注邀请"）。 */
+  var _tok = (++_schedTok);
   if(_timer){CLK.clear(_timer);_timer=null}
   var items=[],t=now();
   for(var i=0;i<state.messages.length;i++){
@@ -7488,7 +7627,7 @@ function schedule(){
   var wait=nx.ts-now();
   if(wait>0){
     _schedSpin=0;
-    _timer=CLK.set(function(){nx.fn();schedule()},Math.min(wait,2147483000));
+    _timer=CLK.set(function(){ if(_tok!==_schedTok)return; nx.fn(); if(_tok===_schedTok)schedule() },Math.min(wait,2147483000));
   }else{
     /* ★ 这里原来是 {nx.fn();schedule()} —— 当场执行、当场再调用自己。
        只要回调又造出一个"已到点"的任务（比如回复之后又产生新的待回消息），
@@ -7500,7 +7639,7 @@ function schedule(){
     if(_tn-_schedSpinAt>1000){_schedSpinAt=_tn;_schedSpin=0}
     _schedSpin++;
     var _sd=_schedSpin>40?300:0;
-    _timer=CLK.set(function(){nx.fn();schedule()},_sd);
+    _timer=CLK.set(function(){ if(_tok!==_schedTok)return; nx.fn(); if(_tok===_schedTok)schedule() },_sd);
   }
 }
 /* ===== 回到前台就重新排期（手机后台会暂停定时器） ===== */
@@ -7929,6 +8068,7 @@ function chatPinTop(){
     if(!y&&bd)y=bd.scrollTop||0;
     if(y>0){
       try{window.scrollTo(0,0)}catch(e0){}
+      try{var _vw0=document.getElementById('view');if(_vw0)_vw0.scrollTop=0}catch(e0){}
       if(de)de.scrollTop=0;
       if(bd)bd.scrollTop=0;
     }
@@ -7999,7 +8139,7 @@ function bubbleHtml(m,c){
       +'<div class="bubble bubble-survey">'+surveyCardHtml(findSurvey(m.surveyId),m.dir==='out')+'</div></div>';
   }
   if(m.kind==='pat'){
-    return '<div class="pat-row"><span class="pat-in"><span class="pat-ic">👋</span><b>'+esc(c?c.name:'他')+'</b> 拍了拍你 · '+esc(m.text||'')+'</span></div>';
+    return '<div class="pat-row"><span class="pat-in"><b>'+esc(c?c.name:'他')+'</b> 拍了拍你 · '+esc(m.text||'')+'</span></div>';
   }
   if(m.kind==='memo'){
     return '<div class="msg-row '+m.dir+'"><span class="bubble-av">'+cAvatar(c)+'</span>'
@@ -9190,6 +9330,13 @@ function beginInvite(){
   var pct=(c.invitePct!=null?c.invitePct:(st.invitePct!=null?st.invitePct:30));
   if(Math.random()*100>=pct)return;
   var mo=invitePickMode();if(!mo)return;
+  /* ② 已经有没回应的邀请（30 分钟内）就不再发第二张，避免一进聊天室就多一张 */
+  var _pend=false;
+  for(var _i2=state.messages.length-1;_i2>=0&&_i2>state.messages.length-60;_i2--){
+    var _m2=state.messages[_i2];
+    if(_m2&&_m2.kind==='invite'&&_m2.dir==='in'&&!_m2.accepted&&(now()-(_m2.ts||0))<30*60000){_pend=true;break}
+  }
+  if(_pend)return;
   var mins=mo.mins||25;
   state.messages.push({id:uid(),contactId:c.id,dir:'in',kind:'invite',modeId:mo.id,modeName:mo.name,mins:mins,text:'',ts:now()});
   save();
@@ -15399,7 +15546,7 @@ function qkBatch() {
     if (!ta || !cnt) return;
     var upd = function () {
       var n = String(ta.value || '').split('\n').filter(function (x) { return x.trim() }).length;
-      cnt.textContent = n + ' 条 · 每条间隔 0.5 秒';
+      cnt.textContent = n + ' 条 · 每条间隔 0.5 秒' + (n > 5 ? '（最多 5 条）' : '');
     };
     ta.addEventListener('input', upd); upd();
   }, 60);
@@ -15408,32 +15555,38 @@ function qkBatchSend() {
   var ta = document.getElementById('qkLines');
   var lines = String((ta && ta.value) || '').split('\n').map(function (x) { return x.trim() }).filter(function (x) { return x });
   if (!lines.length) { toast('先写几条'); return }
-  if (lines.length > 20) lines = lines.slice(0, 20);
+  if (lines.length > 5) lines = lines.slice(0, 5);   /* 用户要求：一次最多 5 条 */
   var c = activeContact(); if (!c) { closeSheet(); return }
   closeSheet();
   var sent = [];
   lines.forEach(function (txt, i) {
     CLK.set(function () {
-      var m = { id: uid(), contactId: c.id, dir: 'out', text: txt, ts: now() };
+      /* ★ 补上 readDue：以前批量发的消息没有这个字段，所以永远不标已读（用户反馈：批量发送没有已读） */
+      var m = { id: uid(), contactId: c.id, dir: 'out', text: txt, ts: now(), readDue: now() + 4200 + i * 350 };
       state.messages.push(m);
       sent.push(m.id);
       try { save() } catch (e) { }
       try { renderChat() } catch (e) { }
       if (i === lines.length - 1) {
         /* 最后一条发完后，他随机引用其中一条回一句 */
-        CLK.set(function () {
+        /* 他挑 1 条回；45% 再补一条（回另一条）。以前只回一条，而且很容易被错过 */
+        var pickOne = function () {
           var pickId = sent[Math.floor(Math.random() * sent.length)];
           var src = null;
           for (var k = 0; k < state.messages.length; k++) if (state.messages[k].id === pickId) src = state.messages[k];
           var reply = '';
           try { reply = composeText(c, src ? src.text : null) } catch (e) { reply = '' }
           if (!reply) reply = '嗯，我看到了。';
-          var useQuote=(state.settings&&state.settings.quoteOn!==false);
-          pushIn(c.id, reply, now(), useQuote?pickId:null);
+          var useQuote = (state.settings && state.settings.quoteOn !== false);
+          pushIn(c.id, reply, now(), useQuote ? pickId : null);
           try { save() } catch (e) { }
           try { renderChat() } catch (e) { }
           try { schedule() } catch (e) { }
-        }, 1400 + Math.random() * 800);
+        };
+        CLK.set(function () {
+          pickOne();
+          if (Math.random() < 0.45) CLK.set(pickOne, 2600 + Math.random() * 2000);
+        }, 1200 + Math.random() * 700);
       }
     }, i * 500);
   });
@@ -17597,6 +17750,9 @@ function homeSeedV6(s){
     try{
       var vv=window.visualViewport;
       if(!vv)return 0;
+      /* 键盘动画期间 iOS 会瞬时报 height=0；照减会算出"整屏都是键盘"的假高度，
+         接着给输入栏加一个 712px 的 margin → 输入栏被顶到屏幕最上面。这种值直接当没有键盘。 */
+      if(!vv.height||vv.height<200)return 0;
       var h=Math.round(window.innerHeight-vv.height-(vv.offsetTop||0));
       return h>0?h:0;
     }catch(e){ return 0 }
@@ -17639,11 +17795,27 @@ function homeSeedV6(s){
     var f=activeField(m);
     if(sheet&&f)scrollIntoSheet(sheet,f);
   }
-  /* 聊天输入栏抬起来（只在"键盘盖住"的模式下用） */
+  /* 聊天输入栏抬起来（只在"键盘盖住、但布局没跟着缩"的模式下用） */
   function chatLift(kb){
     var bar=document.querySelector('.chat-input');
     if(!bar)return;
-    var want=kb>80?('calc('+kb+'px - env(safe-area-inset-bottom))'):'';
+    /* ★ 2026-10-31 修「键盘一开、输入框跑到屏幕上方、下面一大片空白」：
+       以前只要键盘高度 > 80 就无条件给输入栏加 margin-bottom = 键盘高度。
+       可聊天室的 #view 高度本来就等于 --vvh（visualViewport 实测高度，键盘弹起时
+       852→516 会自己缩），再抬一次就是"双重抬高"：
+         #view 516 → 减掉 336 的 margin → 输入栏被顶到 y≈119，列表被压成 54px，
+         剩下 336px 空白全露在输入栏下面（用户截图就是这样，实测能复现）。
+       现在的判据是「量出来的」，不是「猜的」：
+         ① 只有 #view 还没缩下去（说明这台机器的布局没跟着键盘变）才需要抬；
+         ② 抬多少不能超过 #view 高度减去"顶栏+输入栏+一点列表"的安全值，
+            也就是不管 --vvh 取到什么值，输入栏都不可能被推出屏幕。 */
+    var v=document.getElementById('view');
+    var viewH=v?v.clientHeight:0;
+    var SAFE=140;                                  /* 顶栏 65 + 输入栏 61 + 一点列表 */
+    var lifted=kb;
+    if(viewH&&kb>80&&viewH<=window.innerHeight-kb+40)lifted=0;   /* 布局已经缩到键盘上面了，别再抬 */
+    if(viewH&&lifted>SAFE)lifted=Math.min(lifted,Math.max(0,viewH-SAFE));   /* 上限：绝不把输入栏顶出屏幕 */
+    var want=lifted>80?('calc('+lifted+'px - env(safe-area-inset-bottom))'):'';
     if(want){ if(bar.style.marginBottom!==want) bar.style.marginBottom=want }
     else if(bar.style.marginBottom){ bar.style.marginBottom='' }
   }
@@ -18537,9 +18709,10 @@ window.mengxiEnsure=mx;
       '.home-grid>.app-item .app-icon{width:calc(56px*var(--hk))!important;height:calc(56px*var(--hk))!important;border-radius:calc(17px*var(--hk))!important;margin-bottom:calc(7px*var(--hk))!important}',
       '.home-grid>.app-item .app-icon svg{width:calc(26px*var(--hk))!important;height:calc(26px*var(--hk))!important}',
       '.home-grid>.app-item span{font-size:calc(13px*var(--hk))!important}',
-      /* 页面高度写死，不竖向滚动 */
-      '.home-pages{overflow-y:hidden!important;align-items:flex-start!important}',
-      '.home-page{height:100%!important;overflow:hidden!important;display:flex!important;flex-direction:column!important}',
+      /* 2026-10-31 改成「自然滚动」：页面不再写死一屏高、也不再裁掉超出的内容，
+         内容比屏幕高就整页往下滚（用户要的：最底下那排 App 名字能滑出来看全）。 */
+      '.home-pages{overflow-y:visible!important;align-items:flex-start!important}',
+      '.home-page{height:auto!important;overflow:visible!important;display:flex!important;flex-direction:column!important}',
       '.home-page .home-grid{flex:0 0 auto}',
       /* 去掉「＋ 添加组件」 */
       '.wd-add{display:none!important}',
@@ -18637,15 +18810,15 @@ window.mengxiEnsure=mx;
     document.head.appendChild(s);
   }
 
-  /* ---------- ④ 等比缩小：按屏高算 --hk ---------- */
+  /* ---------- ④ 尺寸：固定 1 倍，不再按屏高缩放 ----------
+     旧做法：k = (可视高 - 92) / 700，再把整套图标/组件乘上 k。
+     问题是 iOS 地址栏一伸缩、切个 App 回来，可视高就变 → k 变 → 图标"放大一下又缩小"，
+     而且缩到 0.62 还是放不下时，底部那排就被裁掉了（用户报的）。
+     现在恒定 1 倍：图标大小永远一致，放不下就整页往下滑。 */
   function fitScale() {
     try {
-      var h = (window.visualViewport ? window.visualViewport.height : window.innerHeight) || 852;
-      /* 852 是设计基准；留 90px 给标题/日期/底部点 */
-      var k = (h - 92) / 700;
-      k = Math.max(0.62, Math.min(1, k));
-      document.documentElement.style.setProperty('--hk', k.toFixed(3));
-      document.documentElement.style.setProperty('--fs', Math.max(0.82, Math.min(1, 0.55 + k * 0.45)).toFixed(3));
+      document.documentElement.style.setProperty('--hk', '1');
+      document.documentElement.style.setProperty('--fs', '1');
     } catch (e) { }
   }
 
@@ -21301,15 +21474,13 @@ function openApp(k) {
   window.wdUnifyApply = applyAll;
 })();
 
-/* ================= 首页「锁高 + 自动等比缩放」 =================
-   目标：不竖滑、不挤压、不裁切。
-   做法：
-     · 底部小圆点（.page-dots）改成绝对定位，不再占高度
-     · 首页时锁住 <html>/<body> 的滚动（其它页面照旧能滚）
-     · 打开首页先按 --hk=1 量一次"内容自然高度"，算出 可用/内容 的比例，
-       写进 --hk（下限 0.8，上限 1），再校正一次
-     · 内容最多缩到 80%；还放不下就裁掉底部（极少见），并在控制台留一条提示
-   只动首页尺寸与滚动，不改任何组件样式。 */
+/* ================= 首页：翻页 + 底部圆点（2026-10-31 改版） =================
+   原来的这一段做两件事：① 锁住整页高度不滚；② 按屏高把内容等比缩小到刚好一屏。
+   两件事都被撤掉了（锁高会让 iOS 跳、缩小会把底部那排 App 名字裁掉）：
+     · 现在首页跟别的页面一样自然滚动，内容比屏幕高就往下滑
+     · 图标大小恒定 1 倍（--hk 固定 1），不再按可视高度重算 → 切回主页不跳
+     · 底下那两个小圆点改成浮在视口底部，滑到哪儿都能看到自己在第几页
+   保留的只有"左右翻页自己接管滑动手势"这一块（以前靠它才能在 iOS 上翻页）。 */
 (function () {
   if (window.__homeFit) return; window.__homeFit = 1;
 
@@ -21317,20 +21488,18 @@ function openApp(k) {
     if (document.getElementById('homeFitCss')) return;
     var s = document.createElement('style'); s.id = 'homeFitCss';
     s.textContent = [
-      /* 圆点浮起来，把高度还给内容 */
       '#view .cbg{position:relative!important}',
-      '.page-dots{position:absolute!important;left:0;right:0;bottom:2px!important;margin:0!important;z-index:6}',
-      /* 首页的横向翻页容器保持站点原样，这里不覆盖它的 overflow/touch-action */
-      '.home-page{height:100%!important;overflow:hidden!important}',
-      '.home-grid{align-content:start!important}',
-      /* 首页时锁滚动（离开首页自动解除） */
-      'html.home-lock,html.home-lock body{height:100%!important;overflow:hidden!important}'
+      /* 圆点：吸在可视区底部（首页内容再长也不会把它推到很远的地方） */
+      '.page-dots{position:fixed!important;left:0;right:0;bottom:calc(2px + env(safe-area-inset-bottom))!important;margin:0!important;z-index:6;pointer-events:auto}',
+      /* 首页每一页都可以比一屏高（自然长高，不再 height:100% + overflow:hidden） */
+      '.home-page{height:auto!important;overflow:visible!important}',
+      '.home-grid{align-content:start!important}'
     ].join('\n');
     document.head.appendChild(s);
   }
 
   function isHome() {
-    /* 先看路由，再看首页 DOM 是否真的可见（换到别的页面时必须解除锁滚动） */
+    /* 先看路由，再看首页 DOM 是否真的可见 */
     var v = (location.hash || '').replace('#', '');
     if (v && v !== 'home') return false;
     var hv = document.querySelector('.home-view') || document.getElementById('homePages');
@@ -21338,53 +21507,21 @@ function openApp(k) {
     return !!(hv.offsetWidth || hv.offsetHeight);
   }
 
-  function lockScroll() {
-    try { document.documentElement.classList.toggle('home-lock', isHome()); } catch (e) { }
-  }
-
+  /* 不再测量、不再缩放：--hk 固定 1（尺寸恒定，切页面不会变） */
   function fit() {
     try {
       css();
-      var hp = document.getElementById('homePages');
-      if (!hp) return;
-      var page = hp.querySelector('.home-page');
-      if (!page) return;
-      var root = document.documentElement;
-
-      /* 第一遍：回到 1 倍，量自然高度 */
-      root.style.setProperty('--hk', '1');
-      void page.offsetHeight;
-      var avail = hp.clientHeight || Math.round(hp.getBoundingClientRect().height);
-      var need = page.scrollHeight || Math.round(page.getBoundingClientRect().height);
-      if (!avail || !need) return;
-      var k = 1;
-      if (need > avail + 1) k = Math.max(0.8, avail / need);
-      root.style.setProperty('--hk', k.toFixed(3));
-
-      /* 第二遍：缩放后重新量一次，避免"缩了还是差一点" */
-      requestAnimationFrame(function () {
-        try {
-          var avail2 = hp.clientHeight, need2 = page.scrollHeight;
-          if (need2 > avail2 + 1) {
-            var k2 = Math.max(0.8, k * (avail2 / need2));
-            root.style.setProperty('--hk', k2.toFixed(3));
-            if (k2 <= 0.8001) {
-              try { console.warn('[首页] 内容超出屏幕，已缩到最小 80%，底部会裁掉一点。可用高度 ' + avail2 + 'px，需要 ' + need2 + 'px'); } catch (e) { }
-            }
-          }
-          lockScroll();
-        } catch (e) { }
-      });
+      document.documentElement.style.setProperty('--hk', '1');
     } catch (e) { }
   }
 
-  /* 每次渲染首页 / 换页面 / 旋转屏幕 都重新适配 */
+  /* 每次渲染首页 / 换页面 都补一次样式（幂等） */
   if (typeof goView === 'function' && !window.__homeFitGoView) {
     window.__homeFitGoView = 1;
     var _gv = goView;
     goView = function () {
       var r = _gv.apply(this, arguments);
-      setTimeout(fit, 60); setTimeout(fit, 420);
+      setTimeout(fit, 60);
       return r;
     };
   }
@@ -21399,10 +21536,7 @@ function openApp(k) {
   }
 
   try {
-    window.addEventListener('hashchange', function () { lockScroll(); setTimeout(lockScroll, 80) });
-    window.addEventListener('resize', function () { setTimeout(fit, 120) });
-    window.addEventListener('orientationchange', function () { setTimeout(fit, 300) });
-    if (window.visualViewport) window.visualViewport.addEventListener('resize', function () { setTimeout(fit, 150) });
+    window.addEventListener('hashchange', function () { setTimeout(fit, 60) });
   } catch (e) { }
   try { setTimeout(fit, 300); setTimeout(fit, 900); } catch (e) { }
 
@@ -21514,15 +21648,27 @@ function openApp(k) {
       'body.chat-mode{height:100%!important;overflow:hidden!important}',
       'body.chat-mode #view{height:var(--vvh,100dvh)!important;max-height:var(--vvh,100dvh)!important;',
       'overflow:hidden!important;overscroll-behavior:none!important}',
-      'body.chat-mode .chat-body{overscroll-behavior-y:contain}'
+      'body.chat-mode .chat-body{overscroll-behavior-y:contain}',
+      /* ★ 可视区被 iOS 平移时（html.vv-pan），把聊天/小屋的内容按平移量挪回来，
+         这样"整页被顶上去"不会留下空白；没平移（offsetTop=0）时这条完全不生效。 */
+      'html.vv-pan body.chat-mode #view,html.vv-pan body.room-mode #view{transform:translateY(var(--vvtop,0px))}'
     ].join('\n');
     document.head.appendChild(s);
   }
 
   function readVVH() {
     try {
-      var h = (window.visualViewport && window.visualViewport.height) || window.innerHeight || 0;
-      if (h) document.documentElement.style.setProperty('--vvh', Math.round(h) + 'px');
+      var vv = window.visualViewport;
+      var h = (vv && vv.height) || 0;
+      var ih = window.innerHeight || 0;
+      /* ★ 2026-10-31 加护栏：iOS 键盘动画期间 visualViewport.height 会瞬时报 0 或几十像素，
+         以前照抄进 --vvh，聊天页 #view 就被压成几乎 0 高 → 整屏空白、只剩键盘（用户截图）。
+         现在：小于 200 的一律丢弃（沿用上一次的有效值），比布局高还大的夹到布局高。 */
+      if (!h || h < 200) return;
+      if (ih && h > ih) h = ih;
+      document.documentElement.style.setProperty('--vvh', Math.round(h) + 'px');
+      /* 有键盘（可视区明显小于布局高）时标记一下，给 CSS 兜底用 */
+      try { document.documentElement.classList.toggle('kb-open', !!ih && h < ih - 80) } catch (e) { }
     } catch (e) { }
   }
 
@@ -21548,7 +21694,52 @@ function openApp(k) {
     try {
       css();
       readVVH();
-      document.documentElement.classList.toggle('lock-all', isChat() || isHome() || isRoom());
+      document.documentElement.classList.toggle('lock-all', isChat() || isRoom());   /* 2026-10-31 取消主页锁：主页也自然滚动，别再锁 html/body（图标跳、划不动都跟锁高有关） */
+    } catch (e) { }
+  }
+
+  /* ================= 键盘的自愈（2026-10-31） =================
+     用户报的：点输入框 → 键盘弹起 → 整页像被顶上去、只剩一大片空白。
+     两个原因叠在一起：
+       ① iOS 会把"可视区"整块往上平移（visualViewport.offsetTop 变正），
+          页面自己是 overflow:hidden，滚不回来 → 顶上去那截就永远露白；
+       ② 输入栏又被 43-sheetKeyboard 按键盘高度抬了一次（双重抬高）。
+     这里每 400ms 自查一次（只在聊天/小屋跑），把三件事拉回正确状态：
+       · --vvh（视口高度，拒绝键盘动画期间的 0/几十像素假值）
+       · --vvtop（可视区被平移了多少）+ html.vv-pan 类：CSS 用 translateY 把内容挪回原位
+       · 输入栏多余的 margin-bottom（布局已经等于视口高时就不该抬）
+       · document 被滚动（另一种"被顶上去"）→ 归零
+     任何一步算错都只是"没生效"，不会把页面推得更远（平移量永远等于实测 offsetTop）。 */
+  function heal() {
+    try {
+      if (!(isChat() || isRoom())) return;
+      var vv = window.visualViewport;
+      if (!vv) return;
+      var vh = Math.round(vv.height || 0);
+      var root = document.documentElement;
+      if (vh >= 200) {
+        var cur = parseFloat(root.style.getPropertyValue('--vvh')) || 0;
+        if (Math.abs(cur - vh) > 2) root.style.setProperty('--vvh', vh + 'px');
+        var top = Math.round(vv.offsetTop || 0);
+        if (top < 0) top = 0;
+        var curTop = parseFloat(root.style.getPropertyValue('--vvtop')) || 0;
+        if (Math.abs(curTop - top) > 1) root.style.setProperty('--vvtop', top + 'px');
+        try { root.classList.toggle('vv-pan', top > 1) } catch (e) { }
+      }
+      /* 输入栏多余的抬高：布局已经等于可视高度（没东西被盖住）就清掉 */
+      var bar = document.querySelector('.chat-input');
+      if (bar && bar.style.marginBottom) {
+        var v = document.getElementById('view');
+        var viewH = v ? v.clientHeight : 0;
+        if (vh >= 200 && viewH && Math.abs(viewH - vh) <= 2) bar.style.marginBottom = '';
+      }
+      /* document 被滚动了（另一种"整页被顶上去"）→ 聊天/小屋本来就该停在 0 */
+      if (window.scrollY > 0 || (document.documentElement && document.documentElement.scrollTop > 0) ||
+        (document.body && document.body.scrollTop > 0)) {
+        try { window.scrollTo(0, 0) } catch (e) { }
+        try { document.documentElement.scrollTop = 0 } catch (e) { }
+        try { document.body.scrollTop = 0 } catch (e) { }
+      }
     } catch (e) { }
   }
 
@@ -21580,7 +21771,18 @@ function openApp(k) {
     };
   }
   try { setTimeout(sync, 120); setTimeout(sync, 600); } catch (e) { }
+  /* 自愈：400ms 一次（只在聊天/小屋真正干活），键盘动画每一帧报什么值都不会被长期沿用 */
+  try {
+    setInterval(heal, 400);
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', function () { setTimeout(heal, 0); setTimeout(heal, 120) });
+      window.visualViewport.addEventListener('scroll', function () { setTimeout(heal, 0) });
+    }
+    document.addEventListener('focusin', function () { setTimeout(heal, 60); setTimeout(heal, 300); setTimeout(heal, 700) }, true);
+    document.addEventListener('focusout', function () { setTimeout(heal, 120) }, true);
+  } catch (e) { }
   window.chatLockSync = sync;
+  window.chatLockHeal = heal;
 })();
 
 /* ================= 雷达 · 灵体罗盘 v2（2026-10-30 重做） =================
@@ -22634,7 +22836,12 @@ function openApp(k) {
     document.body.appendChild(bar);
     _banner = bar;
     setTimeout(function () { if (bar && bar.parentNode) bar.classList.add('show') }, 40);
-    bar.querySelector('b').addEventListener('click', function () { doUpdate(); });
+    /* 条子任意位置都能点（以前只有"点我更新"四个字能点，点别处像没反应） */
+    bar.addEventListener('click', function (ev) {
+      var tg = ev.target;
+      if (tg && (tg.id === 'zikaUpdX' || tg.id === 'zikaUpdSkip')) return;
+      doUpdate();
+    });
     var sk = document.getElementById('zikaUpdSkip');
     if (sk) sk.addEventListener('click', function (ev) {
       ev.stopPropagation();
@@ -22650,37 +22857,42 @@ function openApp(k) {
     });
   }
 
-  /* ---------- 更新：先落缓存再刷新 ---------- */
+  /* ---------- 更新：清缓存 + 注销 SW + 硬刷 ----------
+     以前：postMessage 让 SW 先把新 index 写进缓存，收不到回执就等 20 秒再刷。
+     问题：① 只在「点我更新」那几个字上绑了点击，点条子别处没反应；
+           ② 控制器为空（首次加载 / SW 刚装好）时那 20 秒白等；
+           ③ 刷完仍可能命中旧缓存 → 用户感觉"点了没用"。
+     现在：点条子任意位置都能触发；直接注销 SW + 删本项目的缓存 + 带 ?v= 硬刷，
+           保证这次拿到的是服务器上的真文件，SW 下次访问会自己重新装。 */
   function doUpdate() {
+    var b = document.querySelector('#zikaUpdBar b');
+    if (b) b.textContent = '正在更新…（下 2.5MB，慢网约 1 分钟，别关页面）';
+    var bar = document.getElementById('zikaUpdBar');
+    if (bar) bar.style.pointerEvents = 'none';
+
     var done = false;
-    function go() {
+    var finish = function () {
       if (done) return; done = true;
-      var b = document.querySelector('#zikaUpdBar b');
-      if (b) b.textContent = '正在更新…';
-      setTimeout(function () { try { location.reload() } catch (e) { } }, 120);
-    }
-    try {
-      var ctl = navigator.serviceWorker && navigator.serviceWorker.controller;
-      if (ctl) {
-        var t = setTimeout(go, 20000);           /* SW 没回执也要能刷 */
-        navigator.serviceWorker.addEventListener('message', function onMsg(e) {
-          if (e.data && e.data.type === 'PRECACHE_DONE') {
-            clearTimeout(t);
-            navigator.serviceWorker.removeEventListener('message', onMsg);
-            go();
-          }
-        });
-        ctl.postMessage({ type: 'PRECACHE_NOW', urls: ['./index.html'] });
-      } else {
-        /* 没有 SW：清掉本项目缓存再刷 */
-        if (window.caches && caches.keys) {
-          caches.keys().then(function (ks) {
-            return Promise.all(ks.filter(function (k) { return /^zika-w-/.test(k) }).map(function (k) { return caches.delete(k) }));
-          }).then(go).catch(go);
-        } else go();
+      try { location.reload() } catch (e) { }
+    };
+
+    /* 有 SW：先让 SW 把最新 index 拉进缓存（PRECACHE_NOW），收到回执就刷新；
+       6 秒没回执也刷新（不再等 20 秒），但【绝不删缓存、绝不注销 SW】→ 断网也有旧版兜底。 */
+    var ctl = navigator.serviceWorker && navigator.serviceWorker.controller;
+    if (!ctl) { setTimeout(finish, 250); return; }
+
+    var t = setTimeout(finish, 60000);   /* 慢网下载要等久一点，但到点必刷，绝不卡死 */
+    navigator.serviceWorker.addEventListener('message', function onMsg(e) {
+      if (e.data && e.data.type === 'PRECACHE_DONE') {
+        clearTimeout(t);
+        navigator.serviceWorker.removeEventListener('message', onMsg);
+        finish();
       }
-    } catch (e) { go() }
+    });
+    try { ctl.postMessage({ type: 'PRECACHE_NOW', urls: ['./index.html'] }) }
+    catch (e) { clearTimeout(t); finish() }
   }
+
 
   /* ---------- 离线加速开关 ---------- */
   function swOn() {
@@ -22729,7 +22941,7 @@ function openApp(k) {
       var ck = document.getElementById('zikaChk');
       if (ck) ck.addEventListener('click', function () { ck.textContent = '检查中…'; check(false).then(function () { ck.textContent = '检查更新' }) });
       var rl = document.getElementById('zikaRel');
-      if (rl) rl.addEventListener('click', function () { location.reload() });
+      if (rl) rl.addEventListener('click', function () { doUpdate() });
     }, 30);
   };
 
@@ -23631,7 +23843,483 @@ function openApp(k) {
 
   window.cinemaDebug = function () { return { c: K(), ui: { playing: UI.playing, film: UI.film } }; };
 })();
+
+/* ================= 自由造句（第一批） =================
+   玩家自己填「零件」，他按骨架拼成一句话发给你。
+   这一批只做三件事，全部是"包一层"，不改任何现有函数体：
+
+     ① 回复（replyChat）：命中概率时，把"这一条回复"换成造句
+        · 先显示「正在输入」，跟普通回复一样
+        · 吃他 10 分钟 5 条的总配额（不会刷屏）
+        · 不带引用、不连发、这一轮就只发这一条
+        · 连续最多 2 条、最近 5 条最多 3 条（概率调高也不会满屏都是）
+     ② 气泡（bubbleHtml）：造句消息画成"一格一个零件"，时间/已读/⋮ 照旧
+     ③ 设置（renderMe）：「概率 → 塔罗 / 字卡」里补一行「自由造句 [开关] [15%]」
+
+   开关默认关。关掉以后，行为和没有这个文件完全一致。
+   词表和开关都存在 state.settings.zaoju* → 备份/导入自动带着，不用改备份代码。
+   骨架 8 短 + 4 长；短句只接受 3–6 字，长句 7–12 字；开了长句按 短 7 : 长 3 混发。
+   ======================================================= */
+(function () {
+  if (window.__zaoju) return; window.__zaoju = 1;
+  var V = 'v1';
+
+  /* ---------- 1. 内置词（7 个子分类） ---------- */
+  var BUILTIN = {
+    who: ['我', '你', '他', '她', '我们', '你们', '大家', '朋友', '同事', '自己'],
+    doo: ['抱抱你', '陪你', '想你', '看月亮', '散步', '喝咖啡', '发呆', '加班', '睡觉', '吃饭',
+      '回家', '出门', '打电话', '等你', '夸你', '摸你头', '送花', '听歌', '看剧', '晒太阳'],
+    deg: ['有点', '很', '真', '超', '特别', '一直', '偷偷', '慢慢', '刚刚'],
+    mood: ['开心', '累', '难过', '孤单', '安心', '无聊', '紧张', '困', '委屈', '高兴', '平静',
+      '香', '安静', '暖', '甜'],
+    thing: ['咖啡', '月亮', '花', '雨', '歌', '家', '公园', '公司', '路上', '家里', '阳台', '沙发', '海边', '超市', '厨房', '被窝'],
+    time: ['今晚', '今天', '早上', '周末', '半夜', '刚刚'],
+    tone: ['呀', '啦', '哦', '呢', '嘛', '哟', '哈']
+  };
+  var CATS = [['who', '谁'], ['doo', '干什么'], ['deg', '程度'], ['mood', '心情'],
+    ['thing', '东西·地点'], ['time', '时间'], ['tone', '语气']];
+  /* 同类词内部再分小池：不是所有词都能塞进同一个骨架 */
+  var ADJ_WORDS = ['香', '安静', '暖', '甜'];      /* 心情里"能形容东西"的那几个 */
+  var VERB_DEG = ['一直', '偷偷', '慢慢', '刚刚'];  /* 程度里"能配动作"的那几个 */
+
+  /* ---------- 2. 设置 ---------- */
+  function S() {
+    try {
+      if (!state.settings || typeof state.settings !== 'object') state.settings = {};
+      var s = state.settings;
+      if (s.zaojuOn === undefined) s.zaojuOn = false;
+      if (s.zaojuPct == null) s.zaojuPct = 15;
+      if (s.zaojuLen === undefined) s.zaojuLen = 'short';
+      if (!s.zaojuMine || typeof s.zaojuMine !== 'object' || Array.isArray(s.zaojuMine)) s.zaojuMine = {};
+      if (!s.zaojuOff || typeof s.zaojuOff !== 'object' || Array.isArray(s.zaojuOff)) s.zaojuOff = {};
+      return s;
+    } catch (e) { return {} }
+  }
+  function isOn() { try { return S().zaojuOn === true } catch (e) { return false } }
+  function pct() {
+    try { var p = Number(S().zaojuPct); return isFinite(p) ? Math.max(0, Math.min(40, p)) : 15 }
+    catch (e) { return 15 }
+  }
+  function wordsOf(cat) {
+    var s = S(), out = (s.zaojuMine[cat] || []).slice();
+    (BUILTIN[cat] || []).forEach(function (w) {
+      if ((s.zaojuOff[cat] || []).indexOf(w) < 0) out.push(w);
+    });
+    return out;
+  }
+  function poolOf(spec) {
+    var a = String(spec).split('.'), cat = a[0], sub = a[1];
+    var base = wordsOf(cat);
+    if (!sub) return base;
+    if (cat === 'mood') return base.filter(function (w) { return sub === 'adj' ? ADJ_WORDS.indexOf(w) >= 0 : ADJ_WORDS.indexOf(w) < 0 });
+    if (cat === 'deg') return base.filter(function (w) { return sub === 'verb' ? VERB_DEG.indexOf(w) >= 0 : VERB_DEG.indexOf(w) < 0 });
+    return base;
+  }
+  function allWords() { var n = 0; CATS.forEach(function (c) { n += wordsOf(c[0]).length }); return n }
+
+  /* ---------- 3. 骨架 ---------- */
+  var F_SHORT = [
+    ['who', 'deg.adj', 'mood.emo', 'tone'],   /* 我有点累啦 */
+    ['who', 'deg.adj', 'mood.emo'],           /* 我很开心 */
+    ['who', 'doo'],                           /* 我抱抱你 */
+    ['who', 'deg.verb', 'doo'],               /* 他一直发呆 */
+    ['thing', 'deg.adj', 'mood.adj'],         /* 咖啡很香 */
+    ['deg.adj', 'mood.emo', 'tone'],          /* 有点孤单呢 */
+    ['time', 'who', 'deg.adj', 'mood.emo'],   /* 今晚我有点累 */
+    ['time', 'who', 'doo']                    /* 周末同事送花 */
+  ];
+  var F_LONG = [
+    ['time', 'who', 'deg.verb', 'doo', 'tone'],       /* 今晚我一直加班呀 */
+    ['time', 'thing', 'deg.adj', 'mood.adj', 'tone'], /* 今晚咖啡很香呢 */
+    ['time', 'who', 'deg.adj', 'mood.emo', 'tone'],   /* 今晚我有点累啦 */
+    ['who', 'deg.verb', 'doo', 'tone']                /* 他一直发呆呀 */
+  ];
+  var _lastFrame = -1;
+
+  function pick(a) { return a[Math.floor(Math.random() * a.length)] }
+  function charLen(s) { return String(s == null ? '' : s).replace(/[\s\u200B]/g, '').length }
+  function oneFrame(frames, lo, hi) {
+    var idx = Math.floor(Math.random() * frames.length);
+    for (var g = 0; g < 4 && idx === _lastFrame && frames.length > 1; g++) idx = Math.floor(Math.random() * frames.length);
+    _lastFrame = idx;
+    var frame = frames[idx], parts = [], used = {}, whoPart = '';
+    for (var i = 0; i < frame.length; i++) {
+      var pool = poolOf(frame[i]);
+      /* 主语是"你/你们"时，动作不能再自带"你"，否则会拼出「你陪你」「你抱抱你」 */
+      if (frame[i] === 'doo' && /^你/.test(whoPart)) {
+        pool = pool.filter(function (x) { return String(x).indexOf('你') < 0 });
+      }
+      if (!pool.length) return null;
+      var w = '', t = 0;
+      do { w = pick(pool); t++ } while ((used[w] || (i && w === parts[i - 1])) && t < 6);
+      used[w] = 1; parts.push(w);
+      if (frame[i] === 'who') whoPart = w;
+    }
+    var text = parts.join('');
+    var n = charLen(text);
+    if (n < lo || n > hi) return null;
+    return { text: text, parts: parts, parallel: false };
+  }
+  function parallel(lo, hi) {
+    /* 兜底：两个不同分类的词 + 语气（不分类/拼不出骨架时也有句子） */
+    var ci = Math.floor(Math.random() * CATS.length);
+    var cj = (ci + 1 + Math.floor(Math.random() * (CATS.length - 1))) % CATS.length;
+    var pa = poolOf(CATS[ci][0]), pb = poolOf(CATS[cj][0]), tn = wordsOf('tone');
+    if (!pa.length || !pb.length || !tn.length) return null;
+    var a = pick(pa), b = pick(pb), t = pick(tn);
+    var text = a + ' ' + b + ' ' + t;
+    var n = charLen(text);
+    if (n < lo || n > hi) return null;
+    return { text: text, parts: [a, b, t], parallel: true };
+  }
+  function build() {
+    try {
+      if (!isOn()) return null;
+      if (allWords() < 6) return null;              /* 词太少就不硬拼 */
+      var longOn = S().zaojuLen === 'long';
+      var wantLong = longOn && Math.random() < 0.3;  /* 开了长句：短 7 : 长 3 混发 */
+      var g = null, i;
+      if (wantLong) for (i = 0; i < 8 && !g; i++) g = oneFrame(F_LONG, 7, 12);
+      for (i = 0; i < 10 && !g; i++) g = oneFrame(F_SHORT, 3, 6);
+      for (i = 0; i < 4 && !g; i++) g = parallel(3, 8);
+      return g;
+    } catch (e) { return null }
+  }
+  window.zaojuBuild = build;
+
+  /* ---------- 4. 防刷屏：连续 2 条、最近 5 条最多 3 条 ---------- */
+  function taReplies(cid, n) {
+    var out = [];
+    try {
+      for (var i = state.messages.length - 1; i >= 0 && out.length < n; i--) {
+        var m = state.messages[i];
+        if (!m || m.contactId !== cid || m.dir !== 'in') continue;
+        if (m.kind) continue;                       /* 转账/决策/查岗这些卡片不算进来 */
+        if (m.recalled) continue;
+        out.push(m);
+      }
+    } catch (e) { }
+    return out;
+  }
+  function allowed() {
+    try {
+      var c = (typeof activeContact === 'function') ? activeContact() : null;
+      if (!c) return true;
+      var r = taReplies(c.id, 5);
+      var isZ = function (m) { return !!(m && m.glyph && m.glyph.length) };
+      if (r.length >= 2 && isZ(r[0]) && isZ(r[1])) return false;
+      var z = 0;
+      for (var i = 0; i < r.length; i++) if (isZ(r[i])) z++;
+      if (r.length >= 5 && z >= 3) return false;
+      return true;
+    } catch (e) { return true }
+  }
+
+  /* ---------- 5. 回复：命中就换成造句（拼字卡在没命中时照常生效） ---------- */
+  var _replyChat = window.replyChat;
+  if (typeof _replyChat === 'function') {
+    window.replyChat = function (m) {
+      try {
+        var okKind = !m || !m.kind || m.kind === 'text';
+        if (m && !m.answered && okKind && isOn() && pct() > 0 && allowed() && Math.random() * 100 < pct()) {
+          var c = (typeof contact === 'function' && contact(m.contactId)) ||
+            (typeof activeContact === 'function' && activeContact());
+          if (c && (typeof hisQuota !== 'function' || hisQuota(c.id) > 0)) {
+            var g = build();
+            if (g) {
+              m.answered = true;                     /* 不会再被调度器回一次 */
+              var cid = c.id;
+              /* 先"正在输入"，跟普通回复的观感一致 */
+              try { _typing = { contactId: cid, ts: now(), hold: true }; renderChat(); } catch (e) { }
+              setTimeout(function () {
+                try {
+                  _typing = null;
+                  if (typeof pushIn !== 'function') { try { renderChat() } catch (x) { } return }
+                  pushIn(cid, g.text, now());
+                  var last = state.messages[state.messages.length - 1];
+                  if (last && last.dir === 'in' && last.contactId === cid) {
+                    /* ★ 故意不写 m.kind：站里 msgSave/复制/菜单都是按 `m.kind ? 卡片 : 正文` 分支的，
+                       写了 kind 收藏进去就会变成「[卡片]」。只加一个 glyph 字段，其它一律当普通文字消息。 */
+                    last.glyph = g.parts;
+                    if (g.parallel) last.parallel = 1;
+                  }
+                  try { S().zaojuCount = (Number(S().zaojuCount) || 0) + 1 } catch (e) { }
+                  try { save() } catch (e) { }
+                  try { if ((location.hash.replace('#', '') || 'home') === 'chat') renderChat() } catch (e) { }
+                  try { schedule() } catch (e) { }
+                } catch (e) { try { _typing = null; renderChat() } catch (x) { } }
+              }, (typeof rnd === 'function' ? rnd(900, 1800) : 1200));
+              return;
+            }
+          }
+        }
+      } catch (e) { }
+      return _replyChat.apply(this, arguments);
+    };
+  }
+
+  /* ---------- 6. 气泡：一格一个零件 ---------- */
+  var _bubbleHtml = window.bubbleHtml;
+  if (typeof _bubbleHtml === 'function') {
+    window.bubbleHtml = function (m, c) {
+      try {
+        if (m && !m.recalled && m.glyph && m.glyph.length) {
+          var tiles = '';
+          for (var i = 0; i < m.glyph.length; i++) {
+            if (m.parallel && i > 0) tiles += '<span class="zj-sep">·</span>';
+            tiles += '<span class="zj-tile">' + esc(String(m.glyph[i])) + '</span>';
+          }
+          var av = (m.dir === 'out')
+            ? (typeof meAvatar === 'function' ? meAvatar() : '')
+            : (typeof cAvatar === 'function' ? cAvatar(c) : '');
+          /* 时间/已读/⋮ 跟普通消息完全一致，别自己造一套 */
+          var meta = '<div class="msg-meta">'
+            + (m.catchup ? '<span class="cu">补发</span>' : '')
+            + '<span class="t">' + fmtTime(m.ts) + '</span>'
+            + ((m.dir === 'out' && !(state.settings && state.settings.readReceipt === false))
+              ? '<span class="st' + (m.read ? '' : ' gray') + '">' + (m.read ? '✓✓' : '✓') + '</span>' : '')
+            + ((state.settings && state.settings.msgMenu !== false)
+              ? '<button class="msg-menu-btn" data-act="msg-menu" data-id="' + m.id + '" title="消息操作">⋮</button>' : '')
+            + '</div>';
+          return '<div class="msg-row ' + m.dir + '">'
+            + '<span class="bubble-av">' + av + '</span>'
+            + '<div class="msg-col">'
+            + '<div class="zj-glyph" data-act="quote" data-id="' + m.id + '">' + tiles + '</div>'
+            + '<div class="zj-line"><span class="zj-tag">' + (m.parallel ? '自由造句 · 并列' : '自由造句') + '</span></div>'
+            + meta
+            + '</div></div>';
+        }
+      } catch (e) { }
+      return _bubbleHtml.apply(this, arguments);
+    };
+  }
+
+  /* ---------- 7. 设置里那一行（概率 → 塔罗 / 字卡） ---------- */
+  function hint() {
+    try {
+      var p = pct();
+      var every = p > 0 ? Math.max(2, Math.round(100 / p)) : 0;
+      var n = allWords();
+      var t = n + ' 个可用词';
+      if (n < 6) t += '（少于 6 个不造句）';
+      else if (p > 0) t += ' · 大概每 ' + every + ' 条来 1 条';
+      t += ' · 连续最多 2 条';
+      return t;
+    } catch (e) { return '' }
+  }
+  function injectPct() {
+    try {
+      var sec = document.getElementById('sec-pct');
+      if (!sec) return;
+      var subs = sec.querySelectorAll('.pct-sub'), host = null, nextHead = null;
+      for (var i = 0; i < subs.length; i++) {
+        if (/塔罗|字卡/.test(subs[i].textContent || '')) { host = subs[i]; nextHead = subs[i + 1] || null; }
+      }
+      if (!host) return;
+      /* 插在「问卷」标题之前 = 落在「塔罗 / 字卡」那一格的最下面，不会跑到问卷旁边 */
+      var anchor = nextHead || (host.nextElementSibling && host.nextElementSibling.nextElementSibling) || null;
+      if (!anchor) return;
+      var box = document.getElementById('zjPctBox');
+      if (!box) {
+        box = document.createElement('div');
+        box.className = 'inl';
+        box.id = 'zjPctBox';
+        box.innerHTML = '<label>自由造句</label>'
+          + '<div class="zj-setrow"><label class="zj-sw" id="zjSw"><i></i></label>'
+          + '<input id="zjPctIn" type="number" min="0" max="40" step="1">'
+          + '<span class="zj-u">%</span></div>'
+          + '<div class="zj-hint2" id="zjHint"></div>';
+        anchor.parentNode.insertBefore(box, anchor);
+        bindPct();
+      }
+      syncPct();
+    } catch (e) { }
+  }
+  function syncPct() {
+    try {
+      var sw = document.getElementById('zjSw'), inp = document.getElementById('zjPctIn'), h = document.getElementById('zjHint');
+      if (sw) sw.className = 'zj-sw' + (isOn() ? ' on' : '');
+      if (inp) inp.value = pct();
+      if (h) h.textContent = hint();
+    } catch (e) { }
+  }
+  function bindPct() {
+    var sw = document.getElementById('zjSw'), inp = document.getElementById('zjPctIn');
+    if (sw) sw.onclick = function () {
+      try {
+        var s = S(); s.zaojuOn = !s.zaojuOn; save();
+        syncPct();
+        toast(s.zaojuOn ? '自由造句已开启' : '自由造句已关闭');
+      } catch (e) { }
+    };
+    if (inp) inp.onchange = function () {
+      try {
+        var v = Number(inp.value);
+        if (!isFinite(v)) v = 15;
+        v = Math.max(0, Math.min(40, Math.round(v)));
+        inp.value = v;
+        S().zaojuPct = v;
+        save(); syncPct();
+      } catch (e) { }
+    };
+  }
+  var _renderMe = window.renderMe;
+  if (typeof _renderMe === 'function') {
+    window.renderMe = function () {
+      var r = _renderMe.apply(this, arguments);
+      setTimeout(injectPct, 30); setTimeout(syncPct, 120);
+      return r;
+    };
+  }
+  try { setTimeout(function () { if ((location.hash.replace('#', '') || 'home') === 'me') injectPct() }, 800); } catch (e) { }
+
+  /* ================= 8. 字卡库里的「自由造句」区块（第二批） =================
+     放在字卡列表上方，是页面里的一段独立内容，不掺进你现有的分类 chip 体系
+     （chip 点下去会把 cur 切到不存在的分类，添加按钮还会往里塞普通字卡）。
+     每次 renderCards 之后重画一次；展开哪个子分类记在内存里，重绘不丢。 */
+  var _openCat = '';
+  function escq(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]
+    })
+  }
+  function offList(cat) { var s = S(); return s.zaojuOff[cat] || [] }
+  function mineList(cat) { var s = S(); return s.zaojuMine[cat] || [] }
+
+  function libHtml() {
+    var total = allWords(), done = Number(S().zaojuCount) || 0;
+    var onOff = isOn() ? '已开启' : '未开启';
+    var h = '<div id="zjLib">'
+      + '<div class="zj-libhead"><b>自由造句</b>'
+      + '<span class="zj-libsub">' + total + ' 个词 · 已拼 ' + done + ' 句 · ' + onOff + '</span></div>'
+      + '<div class="zj-rowline"><span>句子长度</span>'
+      + '<span class="zj-seg2">'
+      + '<button data-zjlen="short" class="' + (S().zaojuLen !== 'long' ? 'on' : '') + '">短句 3–6</button>'
+      + '<button data-zjlen="long" class="' + (S().zaojuLen === 'long' ? 'on' : '') + '">长句 7–12</button>'
+      + '</span></div>'
+      + '<div class="zj-note">开关和概率在「设置 → 概率 → 塔罗 / 字卡」里；这里只管词。</div>';
+
+    for (var i = 0; i < CATS.length; i++) {
+      var key = CATS[i][0], name = CATS[i][1];
+      var list = wordsOf(key), open = _openCat === key;
+      var ex = list.slice(0, 3).join(' / ');
+      h += '<div class="zj-catrow' + (open ? ' open' : '') + '" data-zjcat="' + key + '">'
+        + '<span class="n">' + name + '<i>' + escq(ex) + '</i></span>'
+        + '<span class="c">' + list.length + '</span><span class="ar">' + (open ? '⌄' : '›') + '</span></div>';
+      if (open) {
+        h += '<div class="zj-catbody">';
+        (BUILTIN[key] || []).forEach(function (w) {
+          var off = offList(key).indexOf(w) >= 0;
+          h += '<button class="zj-wd' + (off ? ' off' : '') + '" data-zjoff="' + key + '" data-w="' + escq(w) + '">' + escq(w) + '</button>';
+        });
+        mineList(key).forEach(function (w) {
+          h += '<button class="zj-wd mine" data-zjdel="' + key + '" data-w="' + escq(w) + '">' + escq(w) + '<u>×</u></button>';
+        });
+        h += '<div class="zj-addrow"><input id="zjAdd_' + key + '" placeholder="加一个「' + name + '」的词" maxlength="12">'
+          + '<button data-zjadd="' + key + '">加</button></div></div>';
+      }
+    }
+    return h + '</div>';
+  }
+
+  function paintLib() {
+    try {
+      var host = document.getElementById('zjLib');
+      if (!host) return;
+      var tmp = document.createElement('div');
+      tmp.innerHTML = libHtml();
+      host.parentNode.replaceChild(tmp.firstChild, host);
+      bindLib();
+    } catch (e) { }
+  }
+
+  function bindLib() {
+    var box = document.getElementById('zjLib');
+    if (!box) return;
+    box.querySelectorAll('[data-zjcat]').forEach(function (row) {
+      row.onclick = function () {
+        var k = row.getAttribute('data-zjcat');
+        _openCat = (_openCat === k) ? '' : k;
+        paintLib();
+      };
+    });
+    box.querySelectorAll('[data-zjlen]').forEach(function (b) {
+      b.onclick = function () {
+        try {
+          S().zaojuLen = b.getAttribute('data-zjlen');
+          save(); paintLib();
+        } catch (e) { }
+      };
+    });
+    box.querySelectorAll('[data-zjoff]').forEach(function (b) {
+      b.onclick = function () {
+        try {
+          var cat = b.getAttribute('data-zjoff'), w = b.getAttribute('data-w');
+          var s = S(); s.zaojuOff[cat] = s.zaojuOff[cat] || [];
+          var i = s.zaojuOff[cat].indexOf(w);
+          if (i >= 0) s.zaojuOff[cat].splice(i, 1); else s.zaojuOff[cat].push(w);
+          save(); paintLib();
+        } catch (e) { }
+      };
+    });
+    box.querySelectorAll('[data-zjdel]').forEach(function (b) {
+      b.onclick = function () {
+        try {
+          var cat = b.getAttribute('data-zjdel'), w = b.getAttribute('data-w');
+          var s = S();
+          s.zaojuMine[cat] = (s.zaojuMine[cat] || []).filter(function (x) { return x !== w });
+          save(); paintLib();
+        } catch (e) { }
+      };
+    });
+    box.querySelectorAll('[data-zjadd]').forEach(function (b) {
+      b.onclick = function () {
+        try {
+          var cat = b.getAttribute('data-zjadd');
+          var inp = document.getElementById('zjAdd_' + cat);
+          var v = String((inp && inp.value) || '').replace(/\s+/g, '').slice(0, 12);
+          if (!v) { toast('先写一个词'); return }
+          var s = S();
+          s.zaojuMine[cat] = s.zaojuMine[cat] || [];
+          if (s.zaojuMine[cat].indexOf(v) < 0) s.zaojuMine[cat].push(v);
+          s.zaojuOff[cat] = (s.zaojuOff[cat] || []).filter(function (x) { return x !== v });
+          save(); paintLib();
+          toast('已加进「' + v + '」');
+        } catch (e) { }
+      };
+    });
+  }
+
+  function injectLib() {
+    try {
+      var wrap = document.querySelector('#view .cc-wrap');
+      if (!wrap) return;
+      if (document.getElementById('zjLib')) { paintLib(); return }
+      var anchor = wrap.querySelector('#ccMsg') || wrap.querySelector('.cc-list') || null;
+      var box = document.createElement('div');
+      box.innerHTML = libHtml();
+      var node = box.firstChild;
+      if (anchor && anchor.parentNode === wrap) wrap.insertBefore(node, anchor);
+      else wrap.appendChild(node);
+      bindLib();
+    } catch (e) { }
+  }
+
+  var _renderCards = window.renderCards;
+  if (typeof _renderCards === 'function') {
+    window.renderCards = function () {
+      var r = _renderCards.apply(this, arguments);
+      setTimeout(injectLib, 20);
+      return r;
+    };
+  }
+  try { setTimeout(function () { if ((location.hash.replace('#', '') || 'home') === 'cards') injectLib() }, 900); } catch (e) { }
+
+  try { console.log('[zaoju] loaded', V, 'words=' + allWords()); } catch (e) { }
+})();
 </script>
 <div id="ntfBar" style="display:none" onclick="ntfGo()"></div>
 </body>
 </html>
+
+<!-- __ZIKA_EOF__ a5ba2aa467 -->
